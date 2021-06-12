@@ -1,0 +1,88 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items:stretch;
+  align-content:stretch;
+}
+
+.header {
+  background-color: rgb(248, 255, 255);
+  max-height: 30%;
+}
+
+.header-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+
+.score {
+  width: 200px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.start-button {
+  border-width: 2px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.start-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+  width: inherit;
+  margin: 10px;
+}
+
+.slider {
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.game {
+  background-color: rgb(0, 0, 0);
+  min-height: 70%;
+  overflow: hidden;
+  position: relative;
+}
+
+.ball {
+  animation-name: fall;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  z-index: 5;
+  position: absolute;
+}
+
+@keyframes fall {
+  0% {
+/*     transform: translateY(0%) */
+    top: 0%;
+  }
+  100% {
+/*     transform: translateY(100%); */
+    top: 100%;
+    background-color: red;
+  }
+}
